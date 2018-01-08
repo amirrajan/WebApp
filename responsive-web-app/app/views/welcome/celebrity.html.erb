@@ -1,0 +1,25 @@
+<%= form_for @celebrity, url: '/welcome/create_celebrity', html: { multipart: true } do |form| %>
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="celebrity[name]">Name</label>
+      <input type="text" class="form-control" name="celebrity[name]" id="celebrity_name">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="celebrity[twitter]">Twitter</label>
+      <input type="text" class="form-control" name="celebrity[twitter]" id="celebrity_twitter">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="celebrity[bio]">Website</label>
+      <input type="text" class="form-control" name="celebrity[website]" id="celebrity_website">
+    </div>
+  </div>
+  <div class="form-group">
+      <label for="celebrity[bio]">Bio</label>
+      <input type="text" class="form-control" name="celebrity[bio]" id="celebrity_bio">
+  </div>
+  <div class="form-group">
+      <label for="celebrity[photo]">Photo</label><br />
+      <%= form.file_field :photo, class: 'form-control' %>
+  </div>
+  <button type="submit" class="btn btn-primary">Save</button>
+<% end %>
