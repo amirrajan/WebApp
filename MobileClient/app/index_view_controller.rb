@@ -7,7 +7,7 @@ class IndexViewController < UIViewController
     $index = self
     initialize_reverse_proxy
     add_webview
-    goto_url "http://localhost:3000/welcome/celebrity"
+    goto_url "http://192.168.1.97:3000/welcome/celebrity"
   end
 
   def add_webview

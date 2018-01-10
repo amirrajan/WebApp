@@ -40,6 +40,8 @@ Motion::Project::App.setup do |app|
     'NSAllowsArbitraryLoads' => true
   }
 
+  app.info_plist['NSCameraUsageDescription'] = 'This app uses camera.'
+  app.info_plist['NSPhotoLibraryUsageDescription'] = 'This app uses Photo Library.'
 
   # Dev, create a development certificate at: https://developer.apple.com/account/ios/certificate/development
   # app.codesign_certificate = ''
